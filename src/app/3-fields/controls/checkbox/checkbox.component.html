@@ -1,0 +1,11 @@
+<ng-container *ngIf="formControl">
+  <rc-field [innerComponent]="component">
+
+    <label *ngFor="let cb of checkboxes.controls; index as i">
+      <input type="checkbox"
+             [formControl]="cb">
+      {{options[i].label}}
+    </label>
+
+  </rc-field>
+</ng-container>

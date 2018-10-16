@@ -1,0 +1,13 @@
+<ng-container *ngIf="formControl">
+  <rc-field-rx [innerFormControl]="formControl">
+
+    <label *ngFor="let o of formControl.options">
+      <input type="radio"
+             [formControl]="radiobutton"
+             [value]="o.id"
+             [name]="formControl.radioGroupName" />
+      {{o.label}}
+    </label>
+
+  </rc-field-rx>
+</ng-container>

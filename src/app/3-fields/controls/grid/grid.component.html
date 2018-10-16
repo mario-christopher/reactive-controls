@@ -1,0 +1,20 @@
+<ng-container *ngIf="formControl">
+  <rc-field [innerComponent]="component">
+
+    <table class="rc-table">
+      <thead>
+        <tr class="rc-header">
+          <th *ngFor="let column of columns">{{column.header}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of rows"
+            class="rc-row"
+            (click)="rowClicked.next(row)">
+          <td *ngFor="let column of columns">{{row[column.field]}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </rc-field>
+</ng-container>

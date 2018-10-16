@@ -1,0 +1,35 @@
+<div>
+  <rc-header [header]="title"></rc-header>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <form [formGroup]="extendForm">
+        <rc-textbox-rx formControlName="firstName"></rc-textbox-rx>
+        <rc-textbox-rx formControlName="lastName"></rc-textbox-rx>
+        <rc-dropdown-rx formControlName="modeOfTravel"></rc-dropdown-rx>
+        <rc-checkbox-rx formControlName="sports"></rc-checkbox-rx>
+        <rc-radiobutton-rx formControlName="likeToBe"></rc-radiobutton-rx>
+        <rc-grid-rx formControlName="personSelected"></rc-grid-rx>
+      </form>
+
+      <hr>
+
+      <button type="button"
+              (click)="extendForm.submit()">Submit</button>
+      <button type="button"
+              (click)="extendForm.clear()">Clear</button>
+      <button type="button"
+              (click)="extendForm.save()">Save</button>
+      <button type="button"
+              (click)="extendForm.autoSaveStart()">Enable AutoSave</button>
+      <button type="button"
+              (click)="extendForm.log('Logging', extendForm.value)">Log (something)</button>
+
+    </div>
+
+    <div class="col-xs-offset-1 col-xs-5">
+      <rc-form-value [form]="extendForm"></rc-form-value>
+    </div>
+  </div>
+
+</div>

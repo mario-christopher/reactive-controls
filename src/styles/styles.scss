@@ -1,0 +1,124 @@
+@import '~roboto-fontface/css/roboto/roboto-fontface.css';
+@import 'flexboxgrid.min.css';
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html {
+  height: 100%;
+  background-color: #f5f5eb;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-size: 16px;
+}
+
+li {
+  margin: 5px 0;
+}
+
+//  input styles
+%inp {
+  width: 100%;
+  outline: none;
+  margin: 0;
+  padding: 2px;
+}
+
+input[type=text] {
+  @extend %inp;
+}
+
+select {
+  @extend %inp;
+}
+
+input[type=radio] {
+  margin-left: 0;
+}
+
+input[type=checkbox] {
+  margin-left: 0;
+}
+
+
+//  Table styles
+table {
+  border-collapse: collapse;
+
+  tr:hover {
+    background: lightgray;
+    border: 1px solid lightgray;
+  }
+
+  th {
+    padding: 0 10px;
+  }
+
+  td {
+    padding: 0 10px;
+  }
+}
+
+.rc-table {
+  border: 1px solid lightgray;
+  padding: 3px;
+  width: 100%;
+  height: 100%;
+}
+
+.rc-header {
+  text-align: left;
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: bold;
+  height: 40px;
+  border-bottom: 1px solid lightgray;
+  background-color: #f5f7f7;
+}
+
+.rc-row {
+  padding: 6px !important;
+  border-bottom: 1px dotted lightgray;
+  height: 35px;
+}
+
+//  Field Styles
+.rc-field {
+  display: block;
+  margin: 5px 0 !important;
+}
+
+.rc-label {
+  color: blue;
+}
+
+.rc-reqd {
+  color: red;
+}
+
+.rc-hint {
+  display: block;
+  font-size: 10px;
+  color: gray;
+  font-style: italic;
+  text-align: right;
+  min-height: 10px;
+}
+
+.rc-error {
+  display: block;
+  font-size: 10px;
+  color: red;
+  text-align: right;
+  min-height: 10px;
+}
+
+.rc-border {
+  padding: 1px;
+  border: 1px solid red;
+  border-radius: 2px;
+}

@@ -1,0 +1,20 @@
+<ng-container *ngIf="innerComponent">
+  <div class="rc-field">
+
+    <div>
+      <span *ngIf="isRequired"
+            class="rc-reqd">*</span>
+      <label class='rc-label'>{{innerComponent.label}}:</label>
+    </div>
+    <div>
+      <div [class.rc-border]="hasError">
+        <ng-content></ng-content>
+      </div>
+      <div class="rc-hint"
+           *ngIf="!hasError">{{innerComponent.hint}}</div>
+      <div class="rc-error"
+           *ngIf="hasError">{{errorMessage}}</div>
+    </div>
+
+  </div>
+</ng-container>

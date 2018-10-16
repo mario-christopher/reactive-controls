@@ -1,0 +1,45 @@
+.rc-app-title {
+  background-color: blueviolet;
+  padding: 5px 20px;
+  color: azure;
+  font-size: 20px;
+  display:flex;
+  align-items:center;
+}
+
+.rc-side-menu {
+  width: 200px;
+  height: 100%;
+  padding: 10px;
+  border-right: 1px solid blue;
+  margin-right: 10px;
+}
+
+.rc-side-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    line-height:30px;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  li a {
+    display:block;
+    padding:0 20px;
+    text-decoration:none;
+  }
+
+  li a:hover {
+    background-color: lightgray;
+    text-decoration:none;
+  }
+}
+
+.rc-active-menu {
+  background: lightblue;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}

@@ -1,0 +1,21 @@
+<ng-container *ngIf="innerFormControl">
+  <div [id]="'id_' + innerFormControl.name"
+       class="rc-field">
+
+    <div>
+      <span *ngIf="isRequired"
+            class="rc-reqd">*</span>
+      <label class='rc-label'>{{innerFormControl.label}}:</label>
+    </div>
+    <div>
+      <div [class.rc-border]="hasError">
+        <ng-content></ng-content>
+      </div>
+      <div class="rc-hint"
+           *ngIf="!hasError">{{innerFormControl.hint}}</div>
+      <div class="rc-error"
+           *ngIf="hasError">{{errorMessage}}</div>
+    </div>
+
+  </div>
+</ng-container>

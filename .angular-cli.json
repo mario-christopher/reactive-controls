@@ -19,7 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "rc",
       "styles": [
-        "styles.scss"
+        "styles/styles.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

@@ -1,0 +1,12 @@
+<ng-container *ngIf="formControl">
+  <rc-field-rx [innerFormControl]="formControl">
+
+    <select [formControl]="formControl">
+      <option *ngFor="let o of formControl.options"
+              [value]="o.id">
+        {{o.label}}
+      </option>
+    </select>
+
+  </rc-field-rx>
+</ng-container>

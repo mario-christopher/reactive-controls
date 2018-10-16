@@ -1,0 +1,47 @@
+<div>
+  <rc-header [header]="title"></rc-header>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <form [formGroup]="fieldsForm">
+
+        <rc-textbox formControlName="firstName"
+                    label="First Name"
+                    hint="Enter your first name."></rc-textbox>
+
+        <rc-textbox formControlName="lastName"
+                    label="Last Name"
+                    hint="Enter your last name."></rc-textbox>
+
+        <rc-dropdown formControlName="modeOfTravel"
+                     label="Mode of Travel"
+                     hint="Select a mode of travel."
+                     [options]="travelOptions"></rc-dropdown>
+
+        <rc-checkbox formControlName="sports"
+                     label="Sports Interests"
+                     hint="Any Sports interests ?"
+                     [options]="sportsOptions"></rc-checkbox>
+
+        <rc-radiobutton formControlName="likeToBe"
+                        radioGroupName="likeToBe-group"
+                        label="I'd like to be a"
+                        hint="What would you like to be ?"
+                        [options]="likeToBeOptions"></rc-radiobutton>
+
+        <rc-grid formControlName="personSelected"
+                 [rows]="people"
+                 [columns]="columns"
+                 label="List of People"
+                 hint="Select a row to see details."
+                 (rowClicked)="onRowClicked($event)"></rc-grid>
+      </form>
+    </div>
+
+    <div class="col-xs-offset-1 col-xs-5">
+      <rc-form-value [form]="fieldsForm"></rc-form-value>
+    </div>
+
+  </div>
+
+</div>
