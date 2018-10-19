@@ -38,12 +38,12 @@ export class SimpleComponent implements OnInit {
     });
   }
 
-  hasError(name: string) {
-    return !!this.simpleForm.get(name).errors;
+  hasError(fieldName: string) {
+    return !!this.simpleForm.get(fieldName).errors;
   }
 
-  errMessage(name: string) {
-    const errors = this.simpleForm.get(name).errors;
+  errMessage(fieldName: string) {
+    const errors = this.simpleForm.get(fieldName).errors;
     if (errors) {
       if (errors.hasOwnProperty('required')) {
         return 'This is a required field.';
